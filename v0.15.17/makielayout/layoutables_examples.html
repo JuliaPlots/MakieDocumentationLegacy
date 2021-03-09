@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Layoutables &amp; Widgets · Makie Plotting Ecosystem</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script><link href="../assets/favicon.ico" rel="icon" type="image/x-icon"/><link href="../assets/syntaxtheme.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../index.html"><img src="../assets/logo.png" alt="Makie Plotting Ecosystem logo"/></a><div class="docs-package-name"><span class="docs-autofit">Makie Plotting Ecosystem</span></div><form class="docs-search" action="../search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../index.html">Home</a></li><li><span class="tocitem">Basics</span><ul><li><a class="tocitem" href="../basic-tutorial.html">Basic Tutorial</a></li><li><a class="tocitem" href="tutorial.html">Layout Tutorial</a></li><li><a class="tocitem" href="../animation.html">Animations</a></li><li><a class="tocitem" href="../interaction.html">Observables &amp; Interaction</a></li><li><a class="tocitem" href="../plotting_functions.html">Plotting Functions</a></li><li><a class="tocitem" href="../theming.html">Theming</a></li></ul></li><li><span class="tocitem">Documentation</span><ul><li><a class="tocitem" href="../plot_method_signatures.html">Plot Method Signatures</a></li><li><a class="tocitem" href="../figure.html">Figure</a></li><li><a class="tocitem" href="laxis.html">Axis</a></li><li><a class="tocitem" href="grids.html">GridLayout</a></li><li><a class="tocitem" href="llegend.html">Legend</a></li><li class="is-active"><a class="tocitem" href="layoutables_examples.html">Layoutables &amp; Widgets</a><ul class="internal"><li><a class="tocitem" href="#Colorbar"><span>Colorbar</span></a></li><li><a class="tocitem" href="#Slider"><span>Slider</span></a></li><li><a class="tocitem" href="#Label"><span>Label</span></a></li><li><a class="tocitem" href="#Button"><span>Button</span></a></li><li><a class="tocitem" href="#Box"><span>Box</span></a></li><li><a class="tocitem" href="#LScene"><span>LScene</span></a></li><li><a class="tocitem" href="#Toggle"><span>Toggle</span></a></li><li><a class="tocitem" href="#Menu"><span>Menu</span></a></li><li><a class="tocitem" href="#Deleting-Layoutables"><span>Deleting Layoutables</span></a></li></ul></li><li><a class="tocitem" href="layouting.html">How Layouting Works</a></li><li><a class="tocitem" href="../generated/colors.html">Colors</a></li><li><a class="tocitem" href="../generated/plot-attributes.html">Plot attributes</a></li><li><a class="tocitem" href="../recipes.html">Plot Recipes</a></li><li><a class="tocitem" href="../backends_and_output.html">Backends &amp; Output</a></li><li><a class="tocitem" href="../scenes.html">Scenes</a></li><li><a class="tocitem" href="../lighting.html">Lighting</a></li><li><a class="tocitem" href="../cameras.html">Cameras</a></li><li><a class="tocitem" href="../faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="../abstractplotting_api.html">API Reference AbstractPlotting</a></li><li><a class="tocitem" href="reference.html">API Reference MakieLayout</a></li><li><a class="tocitem" href="../generated/axis.html">Integrated Axes (Axis2D / Axis3D)</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Documentation</a></li><li class="is-active"><a href="layoutables_examples.html">Layoutables &amp; Widgets</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="layoutables_examples.html">Layoutables &amp; Widgets</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/master/docs/src/makielayout/layoutables_examples.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Layoutables-and-Widgets"><a class="docs-heading-anchor" href="#Layoutables-and-Widgets">Layoutables &amp; Widgets</a><a id="Layoutables-and-Widgets-1"></a><a class="docs-heading-anchor-permalink" href="#Layoutables-and-Widgets" title="Permalink"></a></h1><div class="admonition is-info"><header class="admonition-header">Note</header><div class="admonition-body"><p>All examples here are presented as CairoMakie svg&#39;s for clarity of visuals, but keep in mind that CairoMakie is not interactive. Use GLMakie for interactive widgets, WGLMakie currently doesn&#39;t have picking implemented which is needed for them.</p></div></div><ul><li><a href="layoutables_examples.html#Layoutables-and-Widgets">Layoutables &amp; Widgets</a></li><ul><li><a href="layoutables_examples.html#Colorbar">Colorbar</a></li><li><a href="layoutables_examples.html#Slider">Slider</a></li><li><a href="layoutables_examples.html#Label">Label</a></li><li><a href="layoutables_examples.html#Button">Button</a></li><li><a href="layoutables_examples.html#Box">Box</a></li><li><a href="layoutables_examples.html#LScene">LScene</a></li><li><a href="layoutables_examples.html#Toggle">Toggle</a></li><li><a href="layoutables_examples.html#Menu">Menu</a></li><li><a href="layoutables_examples.html#Deleting-Layoutables">Deleting Layoutables</a></li></ul></ul><h2 id="Colorbar"><a class="docs-heading-anchor" href="#Colorbar">Colorbar</a><a id="Colorbar-1"></a><a class="docs-heading-anchor-permalink" href="#Colorbar" title="Permalink"></a></h2><p>A Colorbar needs a colormap and a tuple of low/high limits. The colormap&#39;s axis will then span from low to high along the visual representation of the colormap. You can set ticks in a similar way to <code>Axis</code>.</p><p>Here&#39;s how you can create Colorbars manually.</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+Axis(fig[1, 1])
+
+# vertical colorbars
+Colorbar(fig[1, 2], width = 25, limits = (0, 10), colormap = :viridis,
+    flipaxis = false)
+Colorbar(fig[1, 3], width = 25, limits = (0, 5),
+colormap = cgrad(:Spectral, 5, categorical = true))
+Colorbar(fig[1, 4], width = 25, limits = (-1, 1), colormap = :heat,
+    highclip = :cyan, lowclip = :red, label = &quot;Temperature&quot;)
+
+# horizontal colorbars
+Colorbar(fig[2, 1], height = 25, limits = (0, 10), colormap = :viridis,
+    vertical = false)
+Colorbar(fig[3, 1], height = 25, limits = (0, 5),
+    colormap = cgrad(:Spectral, 5, categorical = true), vertical = false)
+Colorbar(fig[4, 1], height = 25, limits = (-1, 1), colormap = :heat,
+    label = &quot;Temperature&quot;, vertical = false, flipaxis = false,
+    highclip = :cyan, lowclip = :red)
+
+fig</code></pre><p><img src="example_colorbar.svg" alt="example colorbar"/></p><p>You can also automatically choose colormap and limits for certain plot objects by passing them as the second argument.</p><pre><code class="language-julia">using CairoMakie
+
+xs = LinRange(0, 20, 50)
+ys = LinRange(0, 15, 50)
+zs = [cos(x) * sin(y) for x in xs, y in ys]
+
+fig = Figure(resolution = (1200, 900))
+
+ax, hm = heatmap(fig[1, 1][1, 1], xs, ys, zs)
+Colorbar(fig[1, 1][1, 2], hm, width = 20)
+
+ax, hm = heatmap(fig[1, 2][1, 1], xs, ys, zs, colormap = :grays,
+    colorrange = (-0.75, 0.75), highclip = :red, lowclip = :blue)
+Colorbar(fig[1, 2][1, 2], hm, width = 20)
+
+ax, hm = contourf(fig[2, 1][1, 1], xs, ys, zs,
+    levels = -1:0.25:1, colormap = :heat)
+Colorbar(fig[2, 1][1, 2], hm, width = 20, ticks = -1:0.25:1)
+
+ax, hm = contourf(fig[2, 2][1, 1], xs, ys, zs,
+    colormap = :Spectral, levels = [-1, -0.5, -0.25, 0, 0.25, 0.5, 1])
+Colorbar(fig[2, 2][1, 2], hm, width = 20, ticks = -1:0.25:1)
+
+fig</code></pre><p><img src="example_colorbar_2.svg" alt="example colorbar 2"/></p><h2 id="Slider"><a class="docs-heading-anchor" href="#Slider">Slider</a><a id="Slider-1"></a><a class="docs-heading-anchor-permalink" href="#Slider" title="Permalink"></a></h2><p>A simple slider without a label. You can create a label using a <code>Label</code> object, for example. You need to specify a range that constrains the slider&#39;s possible values. You can then lift the <code>value</code> observable to make interactive plots.</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+Axis(fig[1, 1])
+sl1 = Slider(fig[2, 1], range = 0:0.01:10, startvalue = 3)
+sl2 = Slider(fig[3, 1], range = 0:0.01:10, startvalue = 5)
+sl3 = Slider(fig[4, 1], range = 0:0.01:10, startvalue = 7)
+
+sl4 = Slider(fig[:, 2], range = 0:0.01:10, horizontal = false,
+    tellwidth = true, height = nothing, width = Auto())</code></pre><p><img src="example_lslider.svg" alt="example lslider"/></p><p>To create a horizontal layout containing a label, a slider, and a value label, use the convenience function <a href="reference.html#AbstractPlotting.MakieLayout.labelslider!-Tuple{Any, Any, Any}"><code>AbstractPlotting.MakieLayout.labelslider!</code></a>, or, if you need multiple aligned rows of sliders, use <a href="reference.html#AbstractPlotting.MakieLayout.labelslidergrid!-Tuple{Any, Any, Any}"><code>AbstractPlotting.MakieLayout.labelslidergrid!</code></a>.</p><pre><code class="language-julia">using CairoMakie
+fig = Figure(resolution = (1200, 900))
+
+Axis(fig[1, 1])
+
+lsgrid = labelslidergrid!(
+    fig,
+    [&quot;Voltage&quot;, &quot;Current&quot;, &quot;Resistance&quot;],
+    # use Ref for the same range for every slider via internal broadcasting
+    Ref(LinRange(0:0.1:1000));
+    formats = [x -&gt; &quot;$(round(x, digits = 1))$s&quot; for s in [&quot;V&quot;, &quot;A&quot;, &quot;Ω&quot;]],
+    width = 350,
+    tellheight = false)
+
+fig[1, 2] = lsgrid.layout
+
+set_close_to!(lsgrid.sliders[1], 230.3)
+set_close_to!(lsgrid.sliders[2], 628.4)
+set_close_to!(lsgrid.sliders[3], 15.9)</code></pre><p><img src="example_labelslidergrid.svg" alt="example labelslidergrid"/></p><p>If you want to programmatically move the slider, use the function <a href="reference.html#AbstractPlotting.MakieLayout.set_close_to!-Tuple{Any, Any}"><code>AbstractPlotting.MakieLayout.set_close_to!</code></a>. Don&#39;t manipulate the <code>value</code> attribute directly, as there is no guarantee that this value exists in the range underlying the slider, and the slider&#39;s displayed value would not change anyway by changing the slider&#39;s output.</p><h2 id="Label"><a class="docs-heading-anchor" href="#Label">Label</a><a id="Label-1"></a><a class="docs-heading-anchor-permalink" href="#Label" title="Permalink"></a></h2><p>This is just normal text, except it&#39;s also layoutable. A text&#39;s size is known, so rows and columns in a GridLayout can shrink to the appropriate width or height.</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+fig[1:2, 1:3] = [Axis(fig) for _ in 1:6]
+
+supertitle = Label(fig[0, :], &quot;Six plots&quot;, textsize = 30)
+
+sideinfo = Label(fig[2:3, 0], &quot;This text is vertical&quot;, rotation = pi/2)</code></pre><p><img src="example_ltext.svg" alt="example ltext"/></p><h2 id="Button"><a class="docs-heading-anchor" href="#Button">Button</a><a id="Button-1"></a><a class="docs-heading-anchor-permalink" href="#Button" title="Permalink"></a></h2><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+Axis(fig[1, 1])
+fig[2, 1] = buttongrid = GridLayout(tellwidth = false)
+
+buttons = buttongrid[1, 1:5] = [Button(fig, label = &quot;Button $i&quot;) for i in 1:5]
+
+for button in buttons
+    on(button.clicks) do n
+        println(&quot;$(button.label[]) was clicked $n times.&quot;)
+    end
+end
+
+fig</code></pre><p><img src="example_lbutton.svg" alt="example lbutton"/></p><h2 id="Box"><a class="docs-heading-anchor" href="#Box">Box</a><a id="Box-1"></a><a class="docs-heading-anchor-permalink" href="#Box" title="Permalink"></a></h2><p>A simple rectangle poly that is layoutable. This can be useful to make boxes for facet plots or when a rectangular placeholder is needed.</p><pre><code class="language-julia">using CairoMakie
+using ColorSchemes
+
+fig = Figure(resolution = (1200, 900))
+
+rects = fig[1:4, 1:6] = [
+    Box(fig, color = c)
+    for c in get.(Ref(ColorSchemes.rainbow), (0:23) ./ 23)]</code></pre><p><img src="example_lrect.svg" alt="example lrect"/></p><h2 id="LScene"><a class="docs-heading-anchor" href="#LScene">LScene</a><a id="LScene-1"></a><a class="docs-heading-anchor-permalink" href="#LScene" title="Permalink"></a></h2><p>If you need a normal Makie scene in a layout, for example for 3D plots, you have to use <code>LScene</code> right now. It&#39;s just a wrapper around the normal <code>Scene</code> that makes it layoutable. The underlying Scene is accessible via the <code>scene</code> field. You can plot into the <code>LScene</code> directly, though.</p><p>You can pass keyword arguments to the underlying <code>Scene</code> object to the <code>scenekw</code> keyword. Currently, it can be necessary to pass a couple of attributes explicitly to make sure they are not inherited from the main scene (which has a pixel camera and no axis, e.g.).</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+lscene = LScene(fig[1, 1], scenekw = (camera = cam3d!, raw = false))
+
+# now you can plot into lscene like you&#39;re used to
+scatter!(lscene, randn(100, 3))</code></pre><h2 id="Toggle"><a class="docs-heading-anchor" href="#Toggle">Toggle</a><a id="Toggle-1"></a><a class="docs-heading-anchor-permalink" href="#Toggle" title="Permalink"></a></h2><p>A toggle with an attribute <code>active</code> that can either be true or false, to enable or disable properties of an interactive plot.</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+ax = Axis(fig[1, 1])
+
+toggles = [Toggle(fig, active = ac) for ac in [true, false]]
+labels = [Label(fig, lift(x -&gt; x ? &quot;active&quot; : &quot;inactive&quot;, t.active))
+    for t in toggles]
+
+fig[1, 2] = grid!(hcat(toggles, labels), tellheight = false)</code></pre><p><img src="example_ltoggle.svg" alt="example ltoggle"/></p><h2 id="Menu"><a class="docs-heading-anchor" href="#Menu">Menu</a><a id="Menu-1"></a><a class="docs-heading-anchor-permalink" href="#Menu" title="Permalink"></a></h2><p>A dropdown menu with <code>options</code>, where each element&#39;s label is determined with <code>optionlabel(element)</code> and the value with <code>optionvalue(element)</code>. The default behavior is to treat a 2-element tuple as <code>(label, value)</code> and any other object as <code>value</code>, where <code>label = string(value)</code>.</p><p>The attribute <code>selection</code> is set to <code>optionvalue(element)</code> when the element&#39;s entry is selected.</p><pre><code class="language-julia">using CairoMakie
+
+fig = Figure(resolution = (1200, 900))
+
+menu = Menu(fig, options = [&quot;viridis&quot;, &quot;heat&quot;, &quot;blues&quot;])
+
+funcs = [sqrt, x-&gt;x^2, sin, cos]
+
+menu2 = Menu(fig, options = zip([&quot;Square Root&quot;, &quot;Square&quot;, &quot;Sine&quot;, &quot;Cosine&quot;], funcs))
+
+fig[1, 1] = vgrid!(
+    Label(fig, &quot;Colormap&quot;, width = nothing),
+    menu,
+    Label(fig, &quot;Function&quot;, width = nothing),
+    menu2;
+    tellheight = false, width = 200)
+
+ax = Axis(fig[1, 2])
+
+func = Node{Any}(funcs[1])
+
+ys = @lift($func.(0:0.3:10))
+scat = scatter!(ax, ys, markersize = 10px, color = ys)
+
+cb = Colorbar(fig[1, 3], scat, width = 30)
+
+on(menu.selection) do s
+    scat.colormap = s
+end
+
+on(menu2.selection) do s
+    func[] = s
+    autolimits!(ax)
+end
+
+menu2.is_open = true</code></pre><p><img src="example_lmenu.svg" alt="example lmenu"/></p><h2 id="Deleting-Layoutables"><a class="docs-heading-anchor" href="#Deleting-Layoutables">Deleting Layoutables</a><a id="Deleting-Layoutables-1"></a><a class="docs-heading-anchor-permalink" href="#Deleting-Layoutables" title="Permalink"></a></h2><p>To remove axes, colorbars and other layoutables from their layout and the figure or scene, use <code>delete!(layoutable)</code>.</p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="llegend.html">« Legend</a><a class="docs-footer-nextpage" href="layouting.html">How Layouting Works »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 8 February 2021 21:29">Monday 8 February 2021</span>. Using Julia version 1.7.0-DEV.489.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

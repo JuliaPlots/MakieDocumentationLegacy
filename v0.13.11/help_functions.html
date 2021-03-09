@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Help functions · Makie.jl</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link href="assets/syntaxtheme.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.png" alt="Makie.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">Makie.jl</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="index.html">Home</a></li><li><span class="tocitem">Basics</span><ul><li><a class="tocitem" href="basic-tutorial.html">Tutorial</a></li><li><a class="tocitem" href="animation.html">Animations</a></li><li><a class="tocitem" href="interaction.html">Observables &amp; Interaction</a></li><li><a class="tocitem" href="plotting_functions.html">Plotting Functions</a></li></ul></li><li><span class="tocitem">Documentation</span><ul><li><a class="tocitem" href="scenes.html">Scenes</a></li><li><a class="tocitem" href="generated/axis.html">Axis</a></li><li><a class="tocitem" href="convenience.html">Convenience functions</a></li><li><a class="tocitem" href="generated/signatures.html">Plot function signatures</a></li><li><a class="tocitem" href="generated/plot-attributes.html">Plot attributes</a></li><li><a class="tocitem" href="generated/colors.html">Colors</a></li><li><a class="tocitem" href="lighting.html">Lighting</a></li><li><a class="tocitem" href="theming.html">Config file</a></li><li><a class="tocitem" href="cameras.html">Cameras</a></li><li><a class="tocitem" href="recipes.html">Plot Recipes</a></li><li><a class="tocitem" href="output.html">Output</a></li><li><a class="tocitem" href="backends.html">Backends</a></li><li><a class="tocitem" href="troubleshooting.html">Troubleshooting</a></li></ul></li><li><span class="tocitem">MakieLayout</span><ul><li><a class="tocitem" href="makielayout/tutorial.html">Tutorial</a></li><li><a class="tocitem" href="makielayout/grids.html">GridLayout</a></li><li><a class="tocitem" href="makielayout/laxis.html">LAxis</a></li><li><a class="tocitem" href="makielayout/special_plots.html">Special Plots</a></li><li><a class="tocitem" href="makielayout/llegend.html">LLegend</a></li><li><a class="tocitem" href="makielayout/layoutables_examples.html">Layoutables Examples</a></li><li><a class="tocitem" href="makielayout/theming.html">Theming Layoutables</a></li><li><a class="tocitem" href="makielayout/layouting.html">How Layouting Works</a></li><li><a class="tocitem" href="makielayout/faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="makielayout/reference.html">API Reference</a></li></ul></li><li><span class="tocitem">Developer Documentation</span><ul><li><a class="tocitem" href="why-makie.html">Why <code>Makie</code>?</a></li><li><a class="tocitem" href="devdocs.html">Devdocs</a></li><li><a class="tocitem" href="abstractplotting_api.html">AbstractPlotting Reference</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="help_functions.html">Help functions</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="help_functions.html">Help functions</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/master/docs/src/help_functions.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Help-functions"><a class="docs-heading-anchor" href="#Help-functions">Help functions</a><a id="Help-functions-1"></a><a class="docs-heading-anchor-permalink" href="#Help-functions" title="Permalink"></a></h1><h2 id="help"><a class="docs-heading-anchor" href="#help"><code>help</code></a><a id="help-1"></a><a class="docs-heading-anchor-permalink" href="#help" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.help" href="#AbstractPlotting.help"><code>AbstractPlotting.help</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">help(func[; extended = false])</code></pre><p>Welcome to the main help function of <code>Makie.jl</code> / <code>AbstractPlotting.jl</code>.</p><p>For help on a specific function&#39;s arguments, type <code>help_arguments(function_name)</code>.</p><p>For help on a specific function&#39;s attributes, type <code>help_attributes(plot_Type)</code>.</p><p>Use the optional <code>extended = true</code> keyword argument to see more details.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/a97ebaf9984d6353217e4e77f87d16a182680eae/src/documentation/documentation.jl#L4-L14">source</a></section></article><p>Example usage:</p><pre><code class="language-julia">help(scatter; extended = true)</code></pre><div class="markdown"><pre><code class="language-julia">scatter&#40;positions&#41;
+scatter&#40;x, y&#41;
+scatter&#40;x, y, z&#41;</code></pre>
+<p>Plots a marker for each element in <code>&#40;x, y, z&#41;</code>, <code>&#40;x, y&#41;</code>, or <code>positions</code>.</p>
+<h2>Attributes</h2>
+<p>Available attributes and their defaults for <code>Combined&#123;AbstractPlotting.scatter,T&#125; where T</code> are: </p>
+<pre><code>  ambient           Float32&#91;0.55, 0.55, 0.55&#93;
+  color             :gray65
+  colormap          :viridis
+  diffuse           Float32&#91;0.4, 0.4, 0.4&#93;
+  distancefield     &quot;nothing&quot;
+  glowcolor         RGBA&#123;N0f8&#125;&#40;0.0,0.0,0.0,0.0&#41;
+  glowwidth         0.0
+  lightposition     :eyeposition
+  linewidth         1
+  marker            GeometryBasics.HyperSphere&#123;2,T&#125; where T
+  marker_offset     AbstractPlotting.Automatic&#40;&#41;
+  markersize        10
+  markerspace       Pixel
+  nan_color         RGBA&#123;Float32&#125;&#40;0.0f0,0.0f0,0.0f0,0.0f0&#41;
+  overdraw          false
+  rotations         Billboard&#40;&#41;
+  shininess         32.0f0
+  specular          Float32&#91;0.2, 0.2, 0.2&#93;
+  ssao              false
+  strokecolor       :black
+  strokewidth       1.0
+  transform_marker  false
+  transparency      false
+  uv_offset_width   Float32&#91;0.0, 0.0, 0.0, 0.0&#93;
+  visible           true</code></pre>
+<p><code>scatter</code> has the following function signatures: </p>
+<pre><code>  &#40;Vector, Vector&#41;
+  &#40;Vector, Vector, Vector&#41;
+  &#40;Matrix&#41;</code></pre>
+<p>Please refer to <a href="@ref"><code>convert_arguments</code></a> to find the full list of accepted arguments</p>
+<p>Available attributes and their defaults for <code>Combined&#123;AbstractPlotting.scatter,T&#125; where T</code> are: </p>
+<pre><code>  ambient           Float32&#91;0.55, 0.55, 0.55&#93;
+  color             :gray65
+  colormap          :viridis
+  diffuse           Float32&#91;0.4, 0.4, 0.4&#93;
+  distancefield     &quot;nothing&quot;
+  glowcolor         RGBA&#123;N0f8&#125;&#40;0.0,0.0,0.0,0.0&#41;
+  glowwidth         0.0
+  lightposition     :eyeposition
+  linewidth         1
+  marker            GeometryBasics.HyperSphere&#123;2,T&#125; where T
+  marker_offset     AbstractPlotting.Automatic&#40;&#41;
+  markersize        10
+  markerspace       Pixel
+  nan_color         RGBA&#123;Float32&#125;&#40;0.0f0,0.0f0,0.0f0,0.0f0&#41;
+  overdraw          false
+  rotations         Billboard&#40;&#41;
+  shininess         32.0f0
+  specular          Float32&#91;0.2, 0.2, 0.2&#93;
+  ssao              false
+  strokecolor       :black
+  strokewidth       1.0
+  transform_marker  false
+  transparency      false
+  uv_offset_width   Float32&#91;0.0, 0.0, 0.0, 0.0&#93;
+  visible           true</code></pre>
+<p>You can see usage examples of <code>scatter</code> by running:</p>
+<p><code>example_database&#40;scatter&#41;</code></p>
+</div><h2 id="help_arguments"><a class="docs-heading-anchor" href="#help_arguments"><code>help_arguments</code></a><a id="help_arguments-1"></a><a class="docs-heading-anchor-permalink" href="#help_arguments" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.help_arguments" href="#AbstractPlotting.help_arguments"><code>AbstractPlotting.help_arguments</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">help_arguments([io], func)</code></pre><p>Returns a list of signatures for function <code>func</code>.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/a97ebaf9984d6353217e4e77f87d16a182680eae/src/documentation/documentation.jl#L54-L58">source</a></section></article><p>Example usage:</p><pre><code class="language-julia">help_arguments(stdout, scatter)</code></pre><pre class="documenter-example-output">┌ Warning: argument help isn&#39;t currently implemented correctly
+└ @ AbstractPlotting /builds/JuliaGPU/AbstractPlotting-jl/src/documentation/documentation.jl:63
+`scatter` has the following function signatures:
+
+```
+  (Vector, Vector)
+  (Vector, Vector, Vector)
+  (Matrix)
+```</pre><h2 id="help_attributes"><a class="docs-heading-anchor" href="#help_attributes"><code>help_attributes</code></a><a id="help_attributes-1"></a><a class="docs-heading-anchor-permalink" href="#help_attributes" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.help_attributes" href="#AbstractPlotting.help_attributes"><code>AbstractPlotting.help_attributes</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">help_attributes([io], Union{PlotType, PlotFunction}; extended = false)</code></pre><p>Returns a list of attributes for the plot type <code>Typ</code>. The attributes returned extend those attributes found in the <code>default_theme</code>.</p><p>Use the optional keyword argument <code>extended</code> (default = <code>false</code>) to show in addition the default values of each attribute. usage:</p><pre><code class="language-example">&gt;help_attributes(scatter)
+    alpha
+    color
+    colormap
+    colorrange
+    distancefield
+    glowcolor
+    glowwidth
+    linewidth
+    marker
+    marker_offset
+    markersize
+    overdraw
+    rotations
+    strokecolor
+    strokewidth
+    transform_marker
+    transparency
+    uv_offset_width
+    visible</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/a97ebaf9984d6353217e4e77f87d16a182680eae/src/documentation/documentation.jl#L73-L104">source</a></section></article><p>Example usage:</p><pre><code class="language-julia">help_attributes(stdout, Scatter; extended = true)</code></pre><pre class="documenter-example-output">Available attributes and their defaults for `Combined{AbstractPlotting.scatter,ArgType} where ArgType` are:
+
+```
+  ambient           Float32[0.55, 0.55, 0.55]
+  color             :gray65
+  colormap          :viridis
+  diffuse           Float32[0.4, 0.4, 0.4]
+  distancefield     &quot;nothing&quot;
+  glowcolor         RGBA{N0f8}(0.0,0.0,0.0,0.0)
+  glowwidth         0.0
+  lightposition     :eyeposition
+  linewidth         1
+  marker            GeometryBasics.HyperSphere{2,T} where T
+  marker_offset     AbstractPlotting.Automatic()
+  markersize        10
+  markerspace       Pixel
+  nan_color         RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw          false
+  rotations         Billboard()
+  shininess         32.0f0
+  specular          Float32[0.2, 0.2, 0.2]
+  ssao              false
+  strokecolor       :black
+  strokewidth       1.0
+  transform_marker  false
+  transparency      false
+  uv_offset_width   Float32[0.0, 0.0, 0.0, 0.0]
+  visible           true
+```</pre><h1 id="Plot-styling-options"><a class="docs-heading-anchor" href="#Plot-styling-options">Plot styling options</a><a id="Plot-styling-options-1"></a><a class="docs-heading-anchor-permalink" href="#Plot-styling-options" title="Permalink"></a></h1><p>Use these functions to find out the styling options.</p><h2 id="available_marker_symbols"><a class="docs-heading-anchor" href="#available_marker_symbols"><code>available_marker_symbols</code></a><a id="available_marker_symbols-1"></a><a class="docs-heading-anchor-permalink" href="#available_marker_symbols" title="Permalink"></a></h2><pre><code class="language-julia">AbstractPlotting.available_marker_symbols()</code></pre><pre class="documenter-example-output">Marker Symbols:
+    + =&gt; +
+    diamond =&gt; ◆
+    star4 =&gt; ✦
+    star8 =&gt; ✷
+    star6 =&gt; 🟋
+    rtriangle =&gt; ▶
+    x =&gt; x
+    circle =&gt; ●
+    pentagon =&gt; ⬟
+    vline =&gt; ┃
+    cross =&gt; ✚
+    xcross =&gt; ❌
+    rect =&gt; ■
+    ltriangle =&gt; ◀
+    dtriangle =&gt; ▼
+    utriangle =&gt; ▲
+    star5 =&gt; ★
+    octagon =&gt; ⯄
+    hline =&gt; ━
+    hexagon =&gt; ⬢</pre><h2 id="available_gradients"><a class="docs-heading-anchor" href="#available_gradients"><code>available_gradients</code></a><a id="available_gradients-1"></a><a class="docs-heading-anchor-permalink" href="#available_gradients" title="Permalink"></a></h2><pre><code class="language-julia">AbstractPlotting.available_gradients()</code></pre><pre class="documenter-example-output">Gradient Symbol/Strings:
+    Accent
+    Accent_3
+    Accent_4
+    Accent_5
+    Accent_6
+    Accent_7
+    Accent_8
+    Blues
+    Blues_3
+    Blues_4
+    Blues_5
+    Blues_6
+    Blues_7
+    Blues_8
+    Blues_9
+    BrBG
+    BrBG_10
+    BrBG_11
+    BrBG_3
+    BrBG_4
+    BrBG_5
+    BrBG_6
+    BrBG_7
+    BrBG_8
+    BrBG_9
+    BuGn
+    BuGn_3
+    BuGn_4
+    BuGn_5
+    BuGn_6
+    BuGn_7
+    BuGn_8
+    BuGn_9
+    BuPu
+    BuPu_3
+    BuPu_4
+    BuPu_5
+    BuPu_6
+    BuPu_7
+    BuPu_8
+    BuPu_9
+    CMRmap
+    Dark2
+    Dark2_3
+    Dark2_4
+    Dark2_5
+    Dark2_6
+    Dark2_7
+    Dark2_8
+    GnBu
+    GnBu_3
+    GnBu_4
+    GnBu_5
+    GnBu_6
+    GnBu_7
+    GnBu_8
+    GnBu_9
+    Greens
+    Greens_3
+    Greens_4
+    Greens_5
+    Greens_6
+    Greens_7
+    Greens_8
+    Greens_9
+    Greys
+    Greys_3
+    Greys_4
+    Greys_5
+    Greys_6
+    Greys_7
+    Greys_8
+    Greys_9
+    OrRd
+    OrRd_3
+    OrRd_4
+    OrRd_5
+    OrRd_6
+    OrRd_7
+    OrRd_8
+    OrRd_9
+    Oranges
+    Oranges_3
+    Oranges_4
+    Oranges_5
+    Oranges_6
+    Oranges_7
+    Oranges_8
+    Oranges_9
+    PRGn
+    PRGn_10
+    PRGn_11
+    PRGn_3
+    PRGn_4
+    PRGn_5
+    PRGn_6
+    PRGn_7
+    PRGn_8
+    PRGn_9
+    Paired
+    Paired_10
+    Paired_11
+    Paired_12
+    Paired_3
+    Paired_4
+    Paired_5
+    Paired_6
+    Paired_7
+    Paired_8
+    Paired_9
+    Pastel1
+    Pastel1_3
+    Pastel1_4
+    Pastel1_5
+    Pastel1_6
+    Pastel1_7
+    Pastel1_8
+    Pastel1_9
+    Pastel2
+    Pastel2_3
+    Pastel2_4
+    Pastel2_5
+    Pastel2_6
+    Pastel2_7
+    Pastel2_8
+    PiYG
+    PiYG_10
+    PiYG_11
+    PiYG_3
+    PiYG_4
+    PiYG_5
+    PiYG_6
+    PiYG_7
+    PiYG_8
+    PiYG_9
+    PuBu
+    PuBuGn
+    PuBuGn_3
+    PuBuGn_4
+    PuBuGn_5
+    PuBuGn_6
+    PuBuGn_7
+    PuBuGn_8
+    PuBuGn_9
+    PuBu_3
+    PuBu_4
+    PuBu_5
+    PuBu_6
+    PuBu_7
+    PuBu_8
+    PuBu_9
+    PuOr
+    PuOr_10
+    PuOr_11
+    PuOr_3
+    PuOr_4
+    PuOr_5
+    PuOr_6
+    PuOr_7
+    PuOr_8
+    PuOr_9
+    PuRd
+    PuRd_3
+    PuRd_4
+    PuRd_5
+    PuRd_6
+    PuRd_7
+    PuRd_8
+    PuRd_9
+    Purples
+    Purples_3
+    Purples_4
+    Purples_5
+    Purples_6
+    Purples_7
+    Purples_8
+    Purples_9
+    RdBu
+    RdBu_10
+    RdBu_11
+    RdBu_3
+    RdBu_4
+    RdBu_5
+    RdBu_6
+    RdBu_7
+    RdBu_8
+    RdBu_9
+    RdGy
+    RdGy_10
+    RdGy_11
+    RdGy_3
+    RdGy_4
+    RdGy_5
+    RdGy_6
+    RdGy_7
+    RdGy_8
+    RdGy_9
+    RdPu
+    RdPu_3
+    RdPu_4
+    RdPu_5
+    RdPu_6
+    RdPu_7
+    RdPu_8
+    RdPu_9
+    RdYlBu
+    RdYlBu_10
+    RdYlBu_11
+    RdYlBu_3
+    RdYlBu_4
+    RdYlBu_5
+    RdYlBu_6
+    RdYlBu_7
+    RdYlBu_8
+    RdYlBu_9
+    RdYlGn
+    RdYlGn_10
+    RdYlGn_11
+    RdYlGn_3
+    RdYlGn_4
+    RdYlGn_5
+    RdYlGn_6
+    RdYlGn_7
+    RdYlGn_8
+    RdYlGn_9
+    Reds
+    Reds_3
+    Reds_4
+    Reds_5
+    Reds_6
+    Reds_7
+    Reds_8
+    Reds_9
+    Set1
+    Set1_3
+    Set1_4
+    Set1_5
+    Set1_6
+    Set1_7
+    Set1_8
+    Set1_9
+    Set2
+    Set2_3
+    Set2_4
+    Set2_5
+    Set2_6
+    Set2_7
+    Set2_8
+    Set3
+    Set3_10
+    Set3_11
+    Set3_12
+    Set3_3
+    Set3_4
+    Set3_5
+    Set3_6
+    Set3_7
+    Set3_8
+    Set3_9
+    Spectral
+    Spectral_10
+    Spectral_11
+    Spectral_3
+    Spectral_4
+    Spectral_5
+    Spectral_6
+    Spectral_7
+    Spectral_8
+    Spectral_9
+    Wistia
+    YlGn
+    YlGnBu
+    YlGnBu_3
+    YlGnBu_4
+    YlGnBu_5
+    YlGnBu_6
+    YlGnBu_7
+    YlGnBu_8
+    YlGnBu_9
+    YlGn_3
+    YlGn_4
+    YlGn_5
+    YlGn_6
+    YlGn_7
+    YlGn_8
+    YlGn_9
+    YlOrBr
+    YlOrBr_3
+    YlOrBr_4
+    YlOrBr_5
+    YlOrBr_6
+    YlOrBr_7
+    YlOrBr_8
+    YlOrBr_9
+    YlOrRd
+    YlOrRd_3
+    YlOrRd_4
+    YlOrRd_5
+    YlOrRd_6
+    YlOrRd_7
+    YlOrRd_8
+    YlOrRd_9
+    acton
+    afmhot
+    algae
+    alpine
+    amp
+    aquamarine
+    army
+    atlantic
+    auerbach
+    aurora
+    autumn
+    autumn1
+    avocado
+    balance
+    bamako
+    batlow
+    beach
+    berlin
+    bgy
+    bgyw
+    bilbao
+    binary
+    bjy
+    bkr
+    bky
+    blackbody
+    bluegreenyellow
+    blues
+    bluesreds
+    bmw
+    bone
+    bone_1
+    bosch_garden
+    bosch_hell
+    botticelli
+    brass
+    brg
+    broc
+    brocO
+    browncyan
+    buda
+    bwr
+    canaletto
+    candy
+    cezanne
+    cherry
+    cinferno
+    cividis
+    cmyk
+    coffee
+    colorwheel
+    cool
+    coolwarm
+    copper
+    cork
+    corkO
+    cubehelix
+    curl
+    cyclic1
+    cyclic2
+    cyclic3
+    cyclic_grey_15_85_c0_n256
+    cyclic_grey_15_85_c0_n256_s25
+    cyclic_mrybm_35_75_c68_n256
+    cyclic_mrybm_35_75_c68_n256_s25
+    cyclic_mygbm_30_95_c78_n256
+    cyclic_mygbm_30_95_c78_n256_s25
+    cyclic_wrwbw_40_90_c42_n256
+    cyclic_wrwbw_40_90_c42_n256_s25
+    darkrainbow
+    darkterrain
+    darktest
+    davos
+    deep
+    deepsea
+    delta
+    dense
+    devon
+    dimgreys
+    diverging_bkr_55_10_c35_n256
+    diverging_bky_60_10_c30_n256
+    diverging_bwr_40_95_c42_n256
+    diverging_bwr_55_98_c37_n256
+    diverging_cwm_80_100_c22_n256
+    diverging_gkr_60_10_c40_n256
+    diverging_gwr_55_95_c38_n256
+    diverging_gwv_55_95_c39_n256
+    diverging_isoluminant_cjm_75_c23_n256
+    diverging_isoluminant_cjm_75_c24_n256
+    diverging_isoluminant_cjo_70_c25_n256
+    diverging_linear_bjr_30_55_c53_n256
+    diverging_linear_bjy_30_90_c45_n256
+    diverging_rainbow_bgymr_45_85_c67_n256
+    fall
+    fire
+    flag
+    fruitpunch
+    fuchsia
+    gist_earth
+    gist_gray
+    gist_heat
+    gist_ncar
+    gist_rainbow
+    gist_stern
+    gist_yarg
+    gnuplot
+    gnuplot2
+    gray1
+    grayC
+    grays
+    grays1
+    grayyellow
+    greenbrownterrain
+    greenpink
+    greens
+    greys
+    gwv
+    haline
+    hawaii
+    heat
+    hokusai
+    holbein
+    hot
+    hsv
+    ice
+    imola
+    inferno
+    island
+    isolum
+    isoluminant_cgo_70_c39_n256
+    isoluminant_cgo_80_c38_n256
+    isoluminant_cm_70_c39_n256
+    jet
+    jet1
+    julia_colorscheme
+    kb
+    kdc
+    kg
+    kgy
+    klimt
+    kr
+    lajolla
+    lake
+    lapaz
+    leonardo
+    lightrainbow
+    lighttemperaturemap
+    lightterrain
+    lighttest
+    linear_bgy_10_95_c74_n256
+    linear_bgyw_15_100_c67_n256
+    linear_bgyw_15_100_c68_n256
+    linear_blue_5_95_c73_n256
+    linear_blue_95_50_c20_n256
+    linear_bmw_5_95_c86_n256
+    linear_bmw_5_95_c89_n256
+    linear_bmy_10_95_c71_n256
+    linear_bmy_10_95_c78_n256
+    linear_gow_60_85_c27_n256
+    linear_gow_65_90_c35_n256
+    linear_green_5_95_c69_n256
+    linear_grey_0_100_c0_n256
+    linear_grey_10_95_c0_n256
+    linear_kry_5_95_c72_n256
+    linear_kry_5_98_c75_n256
+    linear_kryw_0_100_c71_n256
+    linear_kryw_5_100_c64_n256
+    linear_kryw_5_100_c67_n256
+    linear_ternary_blue_0_44_c57_n256
+    linear_ternary_green_0_46_c42_n256
+    linear_ternary_red_0_50_c52_n256
+    lisbon
+    magma
+    matter
+    mint
+    munch
+    neon
+    nipy_spectral
+    nuuk
+    ocean
+    oleron
+    oslo
+    oxy
+    pastel
+    pearl
+    phase
+    picasso
+    pigeon
+    pink
+    plasma
+    plum
+    prism
+    rainbow
+    rainbow1
+    rainbow2
+    rainbow_bgyr_35_85_c72_n256
+    rainbow_bgyr_35_85_c73_n256
+    rainbow_bgyrm_35_85_c69_n256
+    rainbow_bgyrm_35_85_c71_n256
+    redblue
+    redgreensplit
+    reds
+    redsblues
+    rembrandt
+    roma
+    romaO
+    rose
+    rust
+    sandyterrain
+    seaborn_bright
+    seaborn_bright6
+    seaborn_colorblind
+    seaborn_colorblind6
+    seaborn_dark
+    seaborn_dark6
+    seaborn_deep
+    seaborn_deep6
+    seaborn_icefire_gradient
+    seaborn_muted
+    seaborn_muted6
+    seaborn_pastel
+    seaborn_pastel6
+    seaborn_rocket_gradient
+    seismic
+    sienna
+    solar
+    southwest
+    speed
+    spring
+    starrynight
+    summer
+    sun
+    sunset
+    tab10
+    tab20
+    tab20b
+    tab20c
+    tableau_10
+    tableau_20
+    tableau_blue_green
+    tableau_blue_light
+    tableau_colorblind
+    tableau_gold_purple
+    tableau_green_blue
+    tableau_green_blue_white
+    tableau_green_orange_teal
+    tableau_hue_circle
+    tableau_jewel_bright
+    tableau_miller_stone
+    tableau_nuriel_stone
+    tableau_orang_blue_light
+    tableau_orange_blue
+    tableau_orange_blue_white
+    tableau_orange_light
+    tableau_purple_pink_gray
+    tableau_red_black
+    tableau_red_blue
+    tableau_red_blue_brown
+    tableau_red_blue_white
+    tableau_red_green
+    tableau_red_green_gold
+    tableau_red_green_white
+    tableau_red_lack_white
+    tableau_seattle_grays
+    tableau_summer
+    tableau_sunset_sunrise
+    tableau_superfishel_stone
+    tableau_temperature
+    tableau_traffic
+    tableau_winter
+    temperaturemap
+    tempo
+    terrain
+    thermal
+    thermometer
+    tofino
+    tokyo
+    turbid
+    turbo
+    turku
+    twilight
+    valentine
+    vangogh
+    vermeer
+    vik
+    vikO
+    viridis
+    watermelon
+    winter</pre><p>For other plot attributes and their usage, see the section <a href="generated/plot-attributes.html#Plot-attributes">Plot attributes</a>.</p></article><nav class="docs-footer"><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Wednesday 2 December 2020 23:15">Wednesday 2 December 2020</span>. Using Julia version 1.3.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

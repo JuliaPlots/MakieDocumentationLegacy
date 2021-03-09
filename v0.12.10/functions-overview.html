@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Plotting functions overview · Makie.jl</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link href="assets/syntaxtheme.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.png" alt="Makie.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">Makie.jl</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="index.html">Home</a></li><li><span class="tocitem">Basics</span><ul><li><a class="tocitem" href="basic-tutorial.html">Tutorial</a></li><li><a class="tocitem" href="animation.html">Animation</a></li><li><a class="tocitem" href="interaction.html">Interaction</a></li><li class="is-active"><a class="tocitem" href="functions-overview.html">Plotting functions overview</a><ul class="internal"><li><a class="tocitem" href="#text"><span><code>text</code></span></a></li><li><a class="tocitem" href="#meshscatter"><span><code>meshscatter</code></span></a></li><li><a class="tocitem" href="#scatter"><span><code>scatter</code></span></a></li><li><a class="tocitem" href="#mesh"><span><code>mesh</code></span></a></li><li><a class="tocitem" href="#linesegments"><span><code>linesegments</code></span></a></li><li><a class="tocitem" href="#lines"><span><code>lines</code></span></a></li><li><a class="tocitem" href="#surface"><span><code>surface</code></span></a></li><li><a class="tocitem" href="#volume"><span><code>volume</code></span></a></li><li><a class="tocitem" href="#heatmap"><span><code>heatmap</code></span></a></li><li><a class="tocitem" href="#image"><span><code>image</code></span></a></li><li><a class="tocitem" href="#contour"><span><code>contour</code></span></a></li><li><a class="tocitem" href="#arrows"><span><code>arrows</code></span></a></li><li><a class="tocitem" href="#barplot"><span><code>barplot</code></span></a></li><li><a class="tocitem" href="#poly"><span><code>poly</code></span></a></li><li><a class="tocitem" href="#band"><span><code>band</code></span></a></li><li><a class="tocitem" href="#slider"><span><code>slider</code></span></a></li><li><a class="tocitem" href="#vbox"><span><code>vbox</code></span></a></li><li><a class="tocitem" href="#hbox"><span><code>hbox</code></span></a></li></ul></li></ul></li><li><span class="tocitem">Documentation</span><ul><li><a class="tocitem" href="scenes.html">Scenes</a></li><li><a class="tocitem" href="axis.html">Axis</a></li><li><a class="tocitem" href="convenience.html">Convenience functions</a></li><li><a class="tocitem" href="signatures.html">Plot function signatures</a></li><li><a class="tocitem" href="plot-attributes.html">Plot attributes</a></li><li><a class="tocitem" href="generated/colors.html">Colors</a></li><li><a class="tocitem" href="lighting.html">Lighting</a></li><li><a class="tocitem" href="theming.html">Config file</a></li><li><a class="tocitem" href="cameras.html">Cameras</a></li><li><a class="tocitem" href="recipes.html">Plot Recipes</a></li><li><a class="tocitem" href="output.html">Output</a></li><li><a class="tocitem" href="backends.html">Backends</a></li><li><a class="tocitem" href="troubleshooting.html">Troubleshooting</a></li></ul></li><li><span class="tocitem">MakieLayout</span><ul><li><a class="tocitem" href="makielayout/tutorial.html">Tutorial</a></li><li><a class="tocitem" href="makielayout/grids.html">GridLayout</a></li><li><a class="tocitem" href="makielayout/laxis.html">LAxis</a></li><li><a class="tocitem" href="makielayout/special_plots.html">Special Plots</a></li><li><a class="tocitem" href="makielayout/llegend.html">LLegend</a></li><li><a class="tocitem" href="makielayout/layoutables_examples.html">Layoutables Examples</a></li><li><a class="tocitem" href="makielayout/theming.html">Theming Layoutables</a></li><li><a class="tocitem" href="makielayout/layouting.html">How Layouting Works</a></li><li><a class="tocitem" href="makielayout/faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="makielayout/reference.html">API Reference</a></li></ul></li><li><span class="tocitem">Developer Documentation</span><ul><li><a class="tocitem" href="why-makie.html">Why <code>Makie</code>?</a></li><li><a class="tocitem" href="devdocs.html">Devdocs</a></li><li><a class="tocitem" href="abstractplotting_api.html">AbstractPlotting Reference</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Basics</a></li><li class="is-active"><a href="functions-overview.html">Plotting functions overview</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="functions-overview.html">Plotting functions overview</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com//blob/master/docs/src/functions-overview.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Plotting-functions-overview"><a class="docs-heading-anchor" href="#Plotting-functions-overview">Plotting functions overview</a><a id="Plotting-functions-overview-1"></a><a class="docs-heading-anchor-permalink" href="#Plotting-functions-overview" title="Permalink"></a></h1><p>The follow document lists the atomic plotting functions and their usage. These are the most atomic primitives which one can stack together to form more complex plots.</p><p>For general help about each function, consult the <a href="help_functions.html#Help-functions">Help functions</a>.</p><p>See <a href="signatures.html#Plot-function-signatures">Plot function signatures</a> for the available plot function signatures.</p><p>See <a href="plot-attributes.html#Plot-attributes">Plot attributes</a> for the available plot attributes.</p><h2 id="text"><a class="docs-heading-anchor" href="#text"><code>text</code></a><a id="text-1"></a><a class="docs-heading-anchor-permalink" href="#text" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.text" href="#AbstractPlotting.text"><code>AbstractPlotting.text</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">text(string)</code></pre><p>Plots a text.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Text{...}</code> are: </p><pre><code class="language-none">  align           (:left, :bottom)
+  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  diffuse         Float32[0.4, 0.4, 0.4]
+  font            &quot;Dejavu Sans&quot;
+  justification   0.5
+  lightposition   :eyeposition
+  lineheight      1.0
+  linewidth       1
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  position        Float32[0.0, 0.0]
+  rotation        0.0
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  strokecolor     (:black, 0.0)
+  strokewidth     0
+  textsize        20
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L7">source</a></section></article><h2 id="meshscatter"><a class="docs-heading-anchor" href="#meshscatter"><code>meshscatter</code></a><a id="meshscatter-1"></a><a class="docs-heading-anchor-permalink" href="#meshscatter" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.meshscatter" href="#AbstractPlotting.meshscatter"><code>AbstractPlotting.meshscatter</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">meshscatter(positions)
+meshscatter(x, y)
+meshscatter(x, y, z)</code></pre><p>Plots a mesh for each element in <code>(x, y, z)</code>, <code>(x, y)</code>, or <code>positions</code> (similar to <code>scatter</code>). <code>markersize</code> is a scaling applied to the primitive passed as <code>marker</code>.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>MeshScatter{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        :viridis
+  colorrange      AbstractPlotting.Automatic()
+  diffuse         Float32[0.4, 0.4, 0.4]
+  lightposition   :eyeposition
+  linewidth       1
+  marker          GeometryBasics.HyperSphere{3,Float32}(Float32[0.0, 0.0, 0.0], 1.0f0)
+  markersize      0.1
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  rotations       1.0 + 0.0im + 0.0jm + 0.0km
+  shading         true
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L10">source</a></section></article><h2 id="scatter"><a class="docs-heading-anchor" href="#scatter"><code>scatter</code></a><a id="scatter-1"></a><a class="docs-heading-anchor-permalink" href="#scatter" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.scatter" href="#AbstractPlotting.scatter"><code>AbstractPlotting.scatter</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">scatter(positions)
+scatter(x, y)
+scatter(x, y, z)</code></pre><p>Plots a marker for each element in <code>(x, y, z)</code>, <code>(x, y)</code>, or <code>positions</code>.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Scatter{...}</code> are: </p><pre><code class="language-none">  ambient           Float32[0.55, 0.55, 0.55]
+  color             :gray65
+  colormap          :viridis
+  diffuse           Float32[0.4, 0.4, 0.4]
+  distancefield     &quot;nothing&quot;
+  glowcolor         RGBA{N0f8}(0.0,0.0,0.0,0.0)
+  glowwidth         0.0
+  lightposition     :eyeposition
+  linewidth         1
+  marker            GeometryBasics.HyperSphere{2,T} where T
+  marker_offset     AbstractPlotting.Automatic()
+  markersize        10
+  markerspace       Pixel
+  nan_color         RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw          false
+  rotations         Billboard()
+  shininess         32.0f0
+  specular          Float32[0.2, 0.2, 0.2]
+  ssao              false
+  strokecolor       :black
+  strokewidth       1.0
+  transform_marker  false
+  transparency      false
+  uv_offset_width   Float32[0.0, 0.0, 0.0, 0.0]
+  visible           true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L9">source</a></section></article><h2 id="mesh"><a class="docs-heading-anchor" href="#mesh"><code>mesh</code></a><a id="mesh-1"></a><a class="docs-heading-anchor-permalink" href="#mesh" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.mesh" href="#AbstractPlotting.mesh"><code>AbstractPlotting.mesh</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">mesh(x, y, z)
+mesh(mesh_object)
+mesh(x, y, z, faces)
+mesh(xyz, faces)</code></pre><p>Plots a 3D or 2D mesh.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Mesh{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        :viridis
+  diffuse         Float32[0.4, 0.4, 0.4]
+  interpolate     false
+  lightposition   :eyeposition
+  linewidth       1
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shading         true
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L10">source</a></section></article><h2 id="linesegments"><a class="docs-heading-anchor" href="#linesegments"><code>linesegments</code></a><a id="linesegments-1"></a><a class="docs-heading-anchor-permalink" href="#linesegments" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.linesegments" href="#AbstractPlotting.linesegments"><code>AbstractPlotting.linesegments</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">linesegments(positions)
+linesegments(x, y)
+linesegments(x, y, z)</code></pre><p>Plots a line for each pair of points in <code>(x, y, z)</code>, <code>(x, y)</code>, or <code>positions</code>.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>LineSegments{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        :viridis
+  diffuse         Float32[0.4, 0.4, 0.4]
+  lightposition   :eyeposition
+  linestyle       &quot;nothing&quot;
+  linewidth       1.0
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L9">source</a></section></article><h2 id="lines"><a class="docs-heading-anchor" href="#lines"><code>lines</code></a><a id="lines-1"></a><a class="docs-heading-anchor-permalink" href="#lines" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.lines" href="#AbstractPlotting.lines"><code>AbstractPlotting.lines</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">lines(positions)
+lines(x, y)
+lines(x, y, z)</code></pre><p>Creates a connected line plot for each element in <code>(x, y, z)</code>, <code>(x, y)</code> or <code>positions</code>.</p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>You can separate segments by inserting <code>NaN</code>s.</p></div></div><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Lines{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        :viridis
+  diffuse         Float32[0.4, 0.4, 0.4]
+  lightposition   :eyeposition
+  linestyle       &quot;nothing&quot;
+  linewidth       1.0
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L12">source</a></section></article><h2 id="surface"><a class="docs-heading-anchor" href="#surface"><code>surface</code></a><a id="surface-1"></a><a class="docs-heading-anchor-permalink" href="#surface" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.surface" href="#AbstractPlotting.surface"><code>AbstractPlotting.surface</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">surface(x, y, z)</code></pre><p>Plots a surface, where <code>(x, y)</code>  define a grid whose heights are the entries in <code>z</code>. <code>x</code> and <code>y</code> may be <code>Vectors</code> which define a regular grid, <strong>or</strong> <code>Matrices</code> which define an irregular grid.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Surface{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           &quot;nothing&quot;
+  colormap        :viridis
+  diffuse         Float32[0.4, 0.4, 0.4]
+  highclip        &quot;nothing&quot;
+  lightposition   :eyeposition
+  linewidth       1
+  lowclip         &quot;nothing&quot;
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shading         true
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L8">source</a></section></article><h2 id="volume"><a class="docs-heading-anchor" href="#volume"><code>volume</code></a><a id="volume-1"></a><a class="docs-heading-anchor-permalink" href="#volume" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.volume" href="#AbstractPlotting.volume"><code>AbstractPlotting.volume</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">volume(volume_data)</code></pre><p>Plots a volume. Available algorithms are:</p><ul><li><code>:iso</code> =&gt; IsoValue</li><li><code>:absorption</code> =&gt; Absorption</li><li><code>:mip</code> =&gt; MaximumIntensityProjection</li><li><code>:absorptionrgba</code> =&gt; AbsorptionRGBA</li><li><code>:indexedabsorption</code> =&gt; IndexedAbsorptionRGBA</li></ul><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Volume{...}</code> are: </p><pre><code class="language-none">  algorithm       :mip
+  ambient         Float32[0.55, 0.55, 0.55]
+  color           &quot;nothing&quot;
+  colormap        :viridis
+  colorrange      (0, 1)
+  diffuse         Float32[0.4, 0.4, 0.4]
+  isorange        0.05
+  isovalue        0.5
+  lightposition   :eyeposition
+  linewidth       1
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L12">source</a></section></article><h2 id="heatmap"><a class="docs-heading-anchor" href="#heatmap"><code>heatmap</code></a><a id="heatmap-1"></a><a class="docs-heading-anchor-permalink" href="#heatmap" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.heatmap" href="#AbstractPlotting.heatmap"><code>AbstractPlotting.heatmap</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">heatmap(x, y, values)
+heatmap(values)</code></pre><p>Plots a heatmap as an image on <code>x, y</code> (defaults to interpretation as dimensions).</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Heatmap{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        :viridis
+  diffuse         Float32[0.4, 0.4, 0.4]
+  highclip        &quot;nothing&quot;
+  interpolate     false
+  levels          1
+  lightposition   :eyeposition
+  linewidth       0.0
+  lowclip         &quot;nothing&quot;
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L8">source</a></section></article><h2 id="image"><a class="docs-heading-anchor" href="#image"><code>image</code></a><a id="image-1"></a><a class="docs-heading-anchor-permalink" href="#image" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.image" href="#AbstractPlotting.image"><code>AbstractPlotting.image</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">image(x, y, image)
+image(image)</code></pre><p>Plots an image on range <code>x, y</code> (defaults to dimensions).</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Image{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           :black
+  colormap        Symbol[:black, :white]
+  diffuse         Float32[0.4, 0.4, 0.4]
+  highclip        &quot;nothing&quot;
+  interpolate     true
+  lightposition   :eyeposition
+  linewidth       1
+  lowclip         &quot;nothing&quot;
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L8">source</a></section></article><h2 id="contour"><a class="docs-heading-anchor" href="#contour"><code>contour</code></a><a id="contour-1"></a><a class="docs-heading-anchor-permalink" href="#contour" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.contour" href="#AbstractPlotting.contour"><code>AbstractPlotting.contour</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">contour(x, y, z)</code></pre><p>Creates a contour plot of the plane spanning x::Vector, y::Vector, z::Matrix</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Contour{...}</code> are: </p><pre><code class="language-none">  alpha           1.0
+  ambient         Float32[0.55, 0.55, 0.55]
+  color           &quot;nothing&quot;
+  colormap        :viridis
+  colorrange      AbstractPlotting.Automatic()
+  diffuse         Float32[0.4, 0.4, 0.4]
+  fillrange       false
+  levels          5
+  lightposition   :eyeposition
+  linewidth       1.0
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L7">source</a></section></article><h2 id="arrows"><a class="docs-heading-anchor" href="#arrows"><code>arrows</code></a><a id="arrows-1"></a><a class="docs-heading-anchor-permalink" href="#arrows" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.arrows" href="#AbstractPlotting.arrows"><code>AbstractPlotting.arrows</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">arrows(points, directions; kwargs...)
+arrows(x, y, u, v)
+arrows(x::AbstractVector, y::AbstractVector, u::AbstractMatrix, v::AbstractMatrix)
+arrows(x, y, z, u, v, w)</code></pre><p>Plots arrows at the specified points with the specified components. <code>u</code> and <code>v</code> are interpreted as vector components (<code>u</code> being the x and <code>v</code> being the y), and the vectors are plotted with the tails at <code>x</code>, <code>y</code>.</p><p>If <code>x, y, u, v</code> are <code>&lt;: AbstractVector</code>, then each &#39;row&#39; is plotted as a single vector.</p><p>If <code>u, v</code> are <code>&lt;: AbstractMatrix</code>, then <code>x</code> and <code>y</code> are interpreted as specifications for a grid, and <code>u, v</code> are plotted as arrows along the grid.</p><p><code>arrows</code> can also work in three dimensions.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Arrows{...}</code> are: </p><pre><code class="language-none">  arrowcolor   :black
+  arrowhead    AbstractPlotting.Automatic()
+  arrowsize    0.3
+  arrowtail    &quot;nothing&quot;
+  lengthscale  1.0f0
+  linecolor    :black
+  linestyle    &quot;nothing&quot;
+  linewidth    1
+  normalize    false
+  scale        Float32[1.0, 1.0, 1.0]</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L22">source</a></section></article><h2 id="barplot"><a class="docs-heading-anchor" href="#barplot"><code>barplot</code></a><a id="barplot-1"></a><a class="docs-heading-anchor-permalink" href="#barplot" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.barplot" href="#AbstractPlotting.barplot"><code>AbstractPlotting.barplot</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">barplot(x, y; kwargs...)</code></pre><p>Plots a barplot; <code>y</code> defines the height.  <code>x</code> and <code>y</code> should be 1 dimensional.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>BarPlot{...}</code> are: </p><pre><code class="language-none">  color        :black
+  colormap     :viridis
+  colorrange   AbstractPlotting.Automatic()
+  direction    :y
+  fillto       0.0
+  marker       GeometryBasics.HyperRectangle
+  strokecolor  :white
+  strokewidth  0
+  width        AbstractPlotting.Automatic()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L7">source</a></section></article><h2 id="poly"><a class="docs-heading-anchor" href="#poly"><code>poly</code></a><a id="poly-1"></a><a class="docs-heading-anchor-permalink" href="#poly" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.poly" href="#AbstractPlotting.poly"><code>AbstractPlotting.poly</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">poly(vertices, indices; kwargs...)
+poly(points; kwargs...)
+poly(shape; kwargs...)
+poly(mesh; kwargs...)</code></pre><p>Plots a polygon based on the arguments given. When vertices and indices are given, it functions similarly to <code>mesh</code>. When points are given, it draws one polygon that connects all the points in order. When a shape is given (essentially anything decomposable by <code>GeometryBasics</code>), it will plot <code>decompose(shape)</code>.</p><pre><code class="language-none">poly(coordinates, connectivity; kwargs...)</code></pre><p>Plots polygons, which are defined by <code>coordinates</code> (the coordinates of the vertices) and <code>connectivity</code> (the edges between the vertices).</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Poly{...}</code> are: </p><pre><code class="language-none">  color         :black
+  colormap      :viridis
+  colorrange    AbstractPlotting.Automatic()
+  linestyle     &quot;nothing&quot;
+  overdraw      false
+  shading       false
+  strokecolor   RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  strokewidth   1.0
+  transparency  false
+  visible       true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L19">source</a></section></article><h2 id="band"><a class="docs-heading-anchor" href="#band"><code>band</code></a><a id="band-1"></a><a class="docs-heading-anchor-permalink" href="#band" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.band" href="#AbstractPlotting.band"><code>AbstractPlotting.band</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">band(x, ylower, yupper; kwargs...)
+band(lower, upper; kwargs...)</code></pre><p>Plots a band from <code>ylower</code> to <code>yupper</code> along <code>x</code>.</p><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Band{...}</code> are: </p><pre><code class="language-none">  ambient         Float32[0.55, 0.55, 0.55]
+  color           RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.2f0)
+  colormap        :viridis
+  colorrange      AbstractPlotting.Automatic()
+  diffuse         Float32[0.4, 0.4, 0.4]
+  interpolate     false
+  lightposition   :eyeposition
+  linewidth       1
+  nan_color       RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)
+  overdraw        false
+  shading         true
+  shininess       32.0f0
+  specular        Float32[0.2, 0.2, 0.2]
+  ssao            false
+  transparency    false
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L8">source</a></section></article><h2 id="slider"><a class="docs-heading-anchor" href="#slider"><code>slider</code></a><a id="slider-1"></a><a class="docs-heading-anchor-permalink" href="#slider" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.slider" href="#AbstractPlotting.slider"><code>AbstractPlotting.slider</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">slider(range; kwargs...)</code></pre><p>Creates a slider which slides through the selected range; sliders are discrete. The Slider&#39;s value can be accessed through its <code>value</code> field.  For example:</p><pre><code class="language-julia">scene = slider(1:10)
+lift(scene[end].value) do val
+    # your function here
+end</code></pre><p><strong>Attributes</strong></p><p>Available attributes and their defaults for <code>Slider{...}</code> are: </p><pre><code class="language-none">  backgroundcolor    (:gray, 0.01)
+  buttoncolor        :white
+  buttonsize         15
+  buttonstroke       1.5
+  buttonstrokecolor  :black
+  camera             AbstractPlotting.campixel!
+  position           (0, 0)
+  raw                true
+  slidercolor        (:gray, 0.6)
+  sliderheight       50
+  sliderlength       200
+  start              AbstractPlotting.Automatic()
+  strokecolor        (:black, 0.4)
+  strokewidth        1
+  textcolor          :black
+  textsize           15
+  textspace          50
+  value              0
+  valueprinter       AbstractPlotting.default_printer</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaLang/julia/blob/2d5741174ce3e6a394010d2e470e4269ca54607f/base/#L0-L15">source</a></section></article><h2 id="vbox"><a class="docs-heading-anchor" href="#vbox"><code>vbox</code></a><a id="vbox-1"></a><a class="docs-heading-anchor-permalink" href="#vbox" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.vbox" href="#AbstractPlotting.vbox"><code>AbstractPlotting.vbox</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">vbox(scenes...; parent = Scene(clear = false), kwargs...)</code></pre><p>Box the scenes together on the vertical axis.  For example, two Scenes <code>vbox</code>ed will be placed side-by-side.</p><pre><code class="language-none">--------------------  --------------------
+--                --  --                --
+--    Scene 1     --  --    Scene 2     --
+--                --  --                --
+--------------------  --------------------</code></pre></div></section></article><h2 id="hbox"><a class="docs-heading-anchor" href="#hbox"><code>hbox</code></a><a id="hbox-1"></a><a class="docs-heading-anchor-permalink" href="#hbox" title="Permalink"></a></h2><article class="docstring"><header><a class="docstring-binding" id="AbstractPlotting.hbox" href="#AbstractPlotting.hbox"><code>AbstractPlotting.hbox</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">hbox(scenes...; parent = Scene(clear = false), kwargs...)</code></pre><p>Attach the given Scenes together on the horizontal axis.  For example, two Scenes <code>hbox</code>ed will be placed one on top of the other.</p><pre><code class="language-none">--------------------
+--                --
+--    Scene 1     --
+--                --
+--------------------
+--------------------
+--                --
+--    Scene 2     --
+--                --
+--------------------</code></pre></div></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="interaction.html">« Interaction</a><a class="docs-footer-nextpage" href="scenes.html">Scenes »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 21 September 2020 08:18">Monday 21 September 2020</span>. Using Julia version 1.3.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
