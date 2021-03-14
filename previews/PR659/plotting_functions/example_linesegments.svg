@@ -153,7 +153,7 @@
 <stop offset="1" style="stop-color:rgb(99.324799%,90.615702%,14.393599%);stop-opacity:1;"/>
 </linearGradient>
 </defs>
-<g id="surface38569">
+<g id="surface38578">
 <rect x="0" y="0" width="800" height="600" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 82 532 L 770 532 L 770 30 L 82 30 Z M 82 532 "/>
 <path style="fill:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:0.12;stroke-miterlimit:10;" d="M 217.515625 532 L 217.515625 30 M 391.253906 532 L 391.253906 30 M 564.988281 532 L 564.988281 30 M 738.726562 532 L 738.726562 30 "/>
