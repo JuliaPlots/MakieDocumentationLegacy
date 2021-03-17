@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Plot Recipes · Makie Plotting Ecosystem</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link href="assets/syntaxtheme.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.png" alt="Makie Plotting Ecosystem logo"/></a><div class="docs-package-name"><span class="docs-autofit">Makie Plotting Ecosystem</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="index.html">Home</a></li><li><span class="tocitem">Basics</span><ul><li><a class="tocitem" href="basic-tutorial.html">Basic Tutorial</a></li><li><a class="tocitem" href="makielayout/tutorial.html">Layout Tutorial</a></li><li><a class="tocitem" href="animation.html">Animations</a></li><li><a class="tocitem" href="interaction.html">Observables &amp; Interaction</a></li><li><input class="collapse-toggle" id="menuitem-2-5" type="checkbox"/><label class="tocitem" for="menuitem-2-5"><span class="docs-label">Plotting Functions</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="plotting_functions/arrows.html">arrows</a></li><li><a class="tocitem" href="plotting_functions/band.html">band</a></li><li><a class="tocitem" href="plotting_functions/barplot.html">barplot</a></li><li><a class="tocitem" href="plotting_functions/contour.html">contour</a></li><li><a class="tocitem" href="plotting_functions/contourf.html">contourf</a></li><li><a class="tocitem" href="plotting_functions/density.html">density</a></li><li><a class="tocitem" href="plotting_functions/errorbars.html">errorbars</a></li><li><a class="tocitem" href="plotting_functions/heatmap.html">heatmap</a></li><li><a class="tocitem" href="plotting_functions/hist.html">hist</a></li><li><a class="tocitem" href="plotting_functions/image.html">image</a></li><li><a class="tocitem" href="plotting_functions/lines.html">lines</a></li><li><a class="tocitem" href="plotting_functions/linesegments.html">linesegments</a></li><li><a class="tocitem" href="plotting_functions/mesh.html">mesh</a></li><li><a class="tocitem" href="plotting_functions/meshscatter.html">meshscatter</a></li><li><a class="tocitem" href="plotting_functions/poly.html">poly</a></li><li><a class="tocitem" href="plotting_functions/rangebars.html">rangebars</a></li><li><a class="tocitem" href="plotting_functions/scatter.html">scatter</a></li><li><a class="tocitem" href="plotting_functions/scatterlines.html">scatterlines</a></li><li><a class="tocitem" href="plotting_functions/stem.html">stem</a></li><li><a class="tocitem" href="plotting_functions/surface.html">surface</a></li><li><a class="tocitem" href="plotting_functions/text.html">text</a></li><li><a class="tocitem" href="plotting_functions/volume.html">volume</a></li></ul></li><li><a class="tocitem" href="theming.html">Theming</a></li></ul></li><li><span class="tocitem">Documentation</span><ul><li><a class="tocitem" href="plot_method_signatures.html">Plot Method Signatures</a></li><li><a class="tocitem" href="figure.html">Figure</a></li><li><input class="collapse-toggle" id="menuitem-3-3" type="checkbox"/><label class="tocitem" for="menuitem-3-3"><span class="docs-label">Layoutables &amp; Widgets</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="makielayout/layoutables.html">Layoutables</a></li><li><a class="tocitem" href="makielayout/axis.html">Axis</a></li><li><a class="tocitem" href="makielayout/box.html">Box</a></li><li><a class="tocitem" href="makielayout/button.html">Button</a></li><li><a class="tocitem" href="makielayout/colorbar.html">Colorbar</a></li><li><a class="tocitem" href="makielayout/gridlayout.html">GridLayout</a></li><li><a class="tocitem" href="makielayout/label.html">Label</a></li><li><a class="tocitem" href="makielayout/legend.html">Legend</a></li><li><a class="tocitem" href="makielayout/lscene.html">LScene</a></li><li><a class="tocitem" href="makielayout/menu.html">Menu</a></li><li><a class="tocitem" href="makielayout/slider.html">Slider</a></li><li><a class="tocitem" href="makielayout/toggle.html">Toggle</a></li></ul></li><li><a class="tocitem" href="makielayout/layouting.html">How layouts work</a></li><li><a class="tocitem" href="generated/colors.html">Colors</a></li><li><a class="tocitem" href="generated/plot-attributes.html">Plot attributes</a></li><li class="is-active"><a class="tocitem" href="recipes.html">Plot Recipes</a><ul class="internal"><li><a class="tocitem" href="#Type-recipes"><span>Type recipes</span></a></li><li><a class="tocitem" href="#Full-recipes-with-the-@recipe-macro"><span>Full recipes with the <code>@recipe</code> macro</span></a></li><li><a class="tocitem" href="#Example:-Stock-Chart"><span>Example: Stock Chart</span></a></li></ul></li><li><a class="tocitem" href="backends_and_output.html">Backends &amp; Output</a></li><li><a class="tocitem" href="scenes.html">Scenes</a></li><li><a class="tocitem" href="lighting.html">Lighting</a></li><li><a class="tocitem" href="cameras.html">Cameras</a></li><li><a class="tocitem" href="faq.html">Frequently Asked Questions</a></li><li><a class="tocitem" href="abstractplotting_api.html">API Reference AbstractPlotting</a></li><li><a class="tocitem" href="makielayout/reference.html">API Reference MakieLayout</a></li><li><a class="tocitem" href="generated/axis.html">Integrated Axes (Axis2D / Axis3D)</a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Documentation</a></li><li class="is-active"><a href="recipes.html">Plot Recipes</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="recipes.html">Plot Recipes</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/master/docs/src/recipes.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Plot-Recipes"><a class="docs-heading-anchor" href="#Plot-Recipes">Plot Recipes</a><a id="Plot-Recipes-1"></a><a class="docs-heading-anchor-permalink" href="#Plot-Recipes" title="Permalink"></a></h1><p>Recipes allow you to extend <code>Makie</code> with your own custom types and plotting commands.</p><p>There are two types of recipes:</p><ul><li><em>Type recipes</em> define a simple mapping from a user defined type to an existing plot type</li><li><em>Full recipes</em> define new custom plotting functions.</li></ul><h2 id="Type-recipes"><a class="docs-heading-anchor" href="#Type-recipes">Type recipes</a><a id="Type-recipes-1"></a><a class="docs-heading-anchor-permalink" href="#Type-recipes" title="Permalink"></a></h2><p>Type recipes are mostly just conversions from one type or set of input argument types, yet unknown to Makie, to another which Makie can handle already.</p><div class="admonition is-warning"><header class="admonition-header">Warning</header><div class="admonition-body"><p><code>convert_arguments</code> must always return a Tuple.</p></div></div><p>Plotting of a <code>Circle</code> for example can be defined via a conversion into a vector of points:</p><pre><code class="language-julia">AbstractPlotting.convert_arguments(x::Circle) = (decompose(Point2f, x),)</code></pre><p>You can restrict conversion to a subset of plot types, like only for scatter plots:</p><pre><code class="language-julia">AbstractPlotting.convert_arguments(P::Type{&lt;:Scatter}, x::MyType) = convert_arguments(P, rand(10, 10))</code></pre><p>There are also conversion traits, which make it easier to define behavior for a group of plot types that share the same trait. <code>PointBased</code> for example applies to <code>Scatter</code>, <code>Lines</code>, etc.</p><pre><code class="language-julia">AbstractPlotting.convert_arguments(P::PointBased, x::MyType) = ...</code></pre><p>Lastly, it is also possible to convert multiple arguments together.</p><pre><code class="language-julia">AbstractPlotting.convert_arguments(P::Type{&lt;:Scatter}, x::MyType, y::MyOtherType) = ...</code></pre><p>Optionally you may define the default plot type so that <code>plot(x::MyType)</code> will use it directly:</p><pre><code class="language-julia">plottype(::MyType) = Surface</code></pre><h2 id="Full-recipes-with-the-@recipe-macro"><a class="docs-heading-anchor" href="#Full-recipes-with-the-@recipe-macro">Full recipes with the <code>@recipe</code> macro</a><a id="Full-recipes-with-the-@recipe-macro-1"></a><a class="docs-heading-anchor-permalink" href="#Full-recipes-with-the-@recipe-macro" title="Permalink"></a></h2><p>A full recipe comes in two parts. First is the plot type name, for example <code>MyPlot</code>, and then arguments and theme definition which are defined using the <code>@recipe</code> macro.</p><p>Second is at least one custom <code>plot!</code> method for <code>MyPlot</code> which creates an actual visualization using other existing plotting functions.</p><p>We use an example to show how this works:</p><pre><code class="language-julia">@recipe(MyPlot, x, y, z) do scene
+    Theme(
+        plot_color =&gt; :red
+    )
+end</code></pre><p>This macro expands to several things. Firstly a type definition:</p><pre><code class="language-julia">const MyPlot{ArgTypes} = Combined{myplot, ArgTypes}</code></pre><p>The type parameter of <code>Combined</code> contains the function <code>myplot</code> instead of e.g. a symbol <code>MyPlot</code>. This way the mapping from <code>MyPlot</code> to <code>myplot</code> is safer and simpler. The following signatures are automatically defined to make <code>MyPlot</code> nice to use:</p><pre><code class="language-julia">myplot(args...; kw_args...) = ...
+myplot!(args...; kw_args...) = ...</code></pre><p>A specialization of <code>argument_names</code> is emitted if you have an argument list <code>(x,y,z)</code> provided to the recipe macro:</p><pre><code class="language-none">`argument_names(::Type{&lt;: MyPlot}) = (:x, :y, :z)`</code></pre><p>This is optional but it will allow the use of <code>plot_object[:x]</code> to fetch the first argument from the call <code>plot_object = myplot(rand(10), rand(10), rand(10))</code>, for example.</p><p>Alternatively you can always fetch the <code>i</code>th argument using <code>plot_object[i]</code>, and if you leave out the <code>(x,y,z)</code>, the default version of <code>argument_names</code> will provide <code>plot_object[:arg1]</code> etc.</p><p>The theme given in the body of the <code>@recipe</code> invocation is inserted into a specialization of <code>default_theme</code> which inserts the theme into any scene that plots <code>Myplot</code>:</p><pre><code class="language-julia">function default_theme(scene, ::Myplot)
+    Theme(
+        plot_color =&gt; :red
+    )
+end</code></pre><p>As the second part of defining <code>MyPlot</code>, you should implement the actual plotting of the <code>MyPlot</code> object by specializing <code>plot!</code>:</p><pre><code class="language-julia">function plot!(myplot::MyPlot)
+    # normal plotting code, building on any previously defined recipes
+    # or atomic plotting operations, and adding to the combined `myplot`:
+    lines!(myplot, rand(10), color = myplot[:plot_color])
+    plot!(myplot, myplot[:x], myplot[:y])
+    myplot
+end</code></pre><p>It&#39;s possible to add specializations here, depending on the argument <em>types</em> supplied to <code>myplot</code>. For example, to specialize the behavior of <code>myplot(a)</code> when <code>a</code> is a 3D array of floating point numbers:</p><pre><code class="language-julia">const MyVolume = MyPlot{Tuple{&lt;:AbstractArray{&lt;: AbstractFloat, 3}}}
+argument_names(::Type{&lt;: MyVolume}) = (:volume,) # again, optional
+function plot!(plot::MyVolume)
+    # plot a volume with a colormap going from fully transparent to plot_color
+    volume!(plot, plot[:volume], colormap = :transparent =&gt; plot[:plot_color])
+    plot
+end</code></pre><h2 id="Example:-Stock-Chart"><a class="docs-heading-anchor" href="#Example:-Stock-Chart">Example: Stock Chart</a><a id="Example:-Stock-Chart-1"></a><a class="docs-heading-anchor-permalink" href="#Example:-Stock-Chart" title="Permalink"></a></h2><p>Let&#39;s say we want to visualize stock values with the classic open / close and low / high combinations. In this example, we will create a special type to hold this information, and a recipe that can plot this type.</p><p>First, we make a struct to hold the stock&#39;s values for a given day:</p><pre><code class="language-julia">using CairoMakie
+
+struct StockValue{T&lt;:Real}
+    open::T
+    close::T
+    high::T
+    low::T
+end</code></pre><p>Now we create a new plot type called <code>StockChart</code>. The <code>do scene</code> closure is just a function that returns our default attributes, in this case they color stocks going down red, and stocks going up green.</p><pre><code class="language-julia">@recipe(StockChart) do scene
+    Attributes(
+        downcolor = :red,
+        upcolor = :green,
+    )
+end</code></pre><p>Then we get to the meat of the recipe, which is actually creating a plot method. We need to overload a specific method of <code>AbstractPlotting.plot!</code> which as its argument has a subtype of our new <code>StockChart</code> plot type. The type parameter of that type is a Tuple describing the argument types for which this method should work.</p><p>Note that the input arguments we receive inside the <code>plot!</code> method, which we can extract by indexing into the <code>StockChart</code>, are automatically converted to Observables by Makie.</p><p>This means that we must construct our plotting function in a dynamic way so that it will update itself whenever the input observables change. This can be a bit trickier than recipes you might now from other plotting packages which produce mostly static plots.</p><pre><code class="language-julia">function AbstractPlotting.plot!(
+        sc::StockChart{&lt;:Tuple{AbstractVector{&lt;:Real}, AbstractVector{&lt;:StockValue}}})
+
+    # our first argument is an observable of parametric type AbstractVector{&lt;:Real}
+    times = sc[1]
+    # our second argument is an observable of parametric type AbstractVector{&lt;:StockValue}}
+    stockvalues = sc[2]
+
+    # we predefine a couple of observables for the linesegments
+    # and barplots we need to draw
+    # this is necessary because in Makie we want every recipe to be interactively updateable
+    # and therefore need to connect the observable machinery to do so
+    linesegs = Node(Point2f0[])
+    bar_froms = Node(Float32[])
+    bar_tos = Node(Float32[])
+    colors = Node(Bool[])
+
+    # this helper function will update our observables
+    # whenever `times` or `stockvalues` change
+    function update_plot(times, stockvalues)
+        colors[]
+
+        # clear the vectors inside the observables
+        empty!(linesegs[])
+        empty!(bar_froms[])
+        empty!(bar_tos[])
+        empty!(colors[])
+
+        # then refill them with our updated values
+        for (t, s) in zip(times, stockvalues)
+            push!(linesegs[], Point2f0(t, s.low))
+            push!(linesegs[], Point2f0(t, s.high))
+            push!(bar_froms[], s.open)
+            push!(bar_tos[], s.close)
+        end
+        append!(colors[], [x.close &gt; x.open for x in stockvalues])
+        colors[] = colors[]
+    end
+
+    # connect `update_plot` so that it is called whenver `times`
+    # or `stockvalues` change
+    AbstractPlotting.Observables.onany(update_plot, times, stockvalues)
+
+    # then call it once manually with the first `times` and `stockvalues`
+    # contents so we prepopulate all observables with correct values
+    update_plot(times[], stockvalues[])
+
+    # for the colors we just use a vector of booleans or 0s and 1s, which are
+    # colored according to a 2-element colormap
+    # we build this colormap out of our `downcolor` and `upcolor`
+    # we give the observable `typ = Any` so it will not error when we change
+    # a color from a symbol like :red to a different type like RGBf0(1, 0, 1)
+    colormap = lift(sc.downcolor, sc.upcolor, typ = Any) do dc, uc
+        [dc, uc]
+    end
+
+    # in the last step we plot into our `sc` StockChart object, which means
+    # that our new plot is just made out of two simpler recipes layered on
+    # top of each other
+    linesegments!(sc, linesegs, color = colors, colormap = colormap)
+    barplot!(sc, times, bar_froms, fillto = bar_tos, color = colors, strokewidth = 0, colormap = colormap)
+
+    # lastly we return the new StockChart
+    sc
+end</code></pre><p>Finally, let&#39;s try it out and plot some stocks:</p><pre><code class="language-julia">timestamps = 1:100
+
+# we create some fake stock values in a way that looks pleasing later
+startvalue = StockValue(0.0, 0.0, 0.0, 0.0)
+stockvalues = foldl(timestamps[2:end], init = [startvalue]) do values, t
+    open = last(values).close + 0.3 * randn()
+    close = open + randn()
+    high = max(open, close) + rand()
+    low = min(open, close) - rand()
+    push!(values, StockValue(
+        open, close, high, low
+    ))
+end
+
+# now we can use our new recipe
+f = Figure(resolution = (1200, 900))
+
+stockchart(f[1, 1], timestamps, stockvalues)
+
+# and let&#39;s try one where we change our default attributes
+stockchart(f[2, 1], timestamps, stockvalues,
+    downcolor = :purple, upcolor = :orange)
+f</code></pre><p><img src="example_stockchart.svg" alt="example stockchart"/></p><p>As a last example, lets pretend our stock data is coming in dynamically, and we want to create an animation out of it. This is easy if we use observables as input arguments which we then update frame by frame:</p><pre><code class="language-julia">timestamps = Node(collect(1:100))
+stocknode = Node(stockvalues)
+
+fig, ax, sc = stockchart(timestamps, stocknode)
+
+record(fig, &quot;stockchart_animation.mp4&quot;, 101:200, framerate = 30) do t
+    # push a new timestamp without triggering the observable
+    push!(timestamps[], t)
+
+    # push a new StockValue without triggering the observable
+    old = last(stocknode[])
+    open = old.close + 0.3 * randn()
+    close = open + randn()
+    high = max(open, close) + rand()
+    low = min(open, close) - rand()
+    new = StockValue(open, close, high, low)
+    push!(stocknode[], new)
+
+    # now both timestamps and stocknode are synchronized
+    # again and we can trigger one of them by assigning it to itself
+    # to update the whole stockcharts plot for the new frame
+    stocknode[] = stocknode[]
+    # let&#39;s also update the axis limits because the plot will grow
+    # to the right
+    autolimits!(ax)
+end</code></pre><p><video src="stockchart_animation.mp4" controls="true" title="stockchart animation"><a href="stockchart_animation.mp4">stockchart animation</a></video></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="generated/plot-attributes.html">« Plot attributes</a><a class="docs-footer-nextpage" href="backends_and_output.html">Backends &amp; Output »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Wednesday 17 March 2021 13:59">Wednesday 17 March 2021</span>. Using Julia version 1.5.4.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
