@@ -678,9 +678,9 @@
 <path style="stroke:none;" d="M 6.640625 -9.359375 L 3.9375 -9.359375 L 3.9375 0 L 2.171875 0 L 2.171875 -9.359375 L 0.296875 -9.359375 L 0.296875 -10.171875 L 2.171875 -10.78125 L 2.171875 -11.390625 C 2.171875 -12.691406 2.457031 -13.664062 3.03125 -14.3125 C 3.601562 -14.96875 4.484375 -15.296875 5.671875 -15.296875 C 6.347656 -15.296875 7.039062 -15.175781 7.75 -14.9375 L 7.28125 -13.5625 C 6.675781 -13.757812 6.144531 -13.859375 5.6875 -13.859375 C 5.09375 -13.859375 4.648438 -13.660156 4.359375 -13.265625 C 4.078125 -12.878906 3.9375 -12.265625 3.9375 -11.421875 L 3.9375 -10.71875 L 6.640625 -10.71875 Z M 6.640625 -9.359375 "/>
 </symbol>
 </g>
-<image id="image39666" width="1" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAABmJLR0QA/wD/AP+gvaeTAAAAlUlEQVQYlWXLwREDIQxDUevLC42lhPTfSADnANlJJgeNnjwQDz1R5o5NZKI04STShH0awqYMkVDeCX+sO+vLeweFKMfexPHXnTjv4t5/TRA/t/px3F0EsX+4EIVciAUUuICFWdhFHieT9OJicTFJJo3JddLuPWiadAaNQdPY1qDzoutY27vn8aRp0bXoEk2iBzQlTfkGP/JT0IlBbBUAAAAASUVORK5CYII="/>
+<image id="image39661" width="1" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAABmJLR0QA/wD/AP+gvaeTAAAAlUlEQVQYlWXLwREDIQxDUevLC42lhPTfSADnANlJJgeNnjwQDz1R5o5NZKI04STShH0awqYMkVDeCX+sO+vLeweFKMfexPHXnTjv4t5/TRA/t/px3F0EsX+4EIVciAUUuICFWdhFHieT9OJicTFJJo3JddLuPWiadAaNQdPY1qDzoutY27vn8aRp0bXoEk2iBzQlTfkGP/JT0IlBbBUAAAAASUVORK5CYII="/>
 <pattern id="pattern0" patternUnits="userSpaceOnUse" width="1" height="100"  patternTransform="matrix(30,0,0,-3.44,1031,584)">
-  <use xlink:href="#image39666"/>
+  <use xlink:href="#image39661"/>
 </pattern>
 <clipPath id="clip1">
   <path d="M 472 155 L 722 155 L 722 412 L 472 412 Z M 472 155 "/>
@@ -689,7 +689,7 @@
   <path d="M 703 300 L 737 300 L 737 341 L 703 341 Z M 703 300 "/>
 </clipPath>
 </defs>
-<g id="surface39662">
+<g id="surface39657">
 <rect x="0" y="0" width="1200" height="700" style="fill:rgb(98.000002%,98.000002%,98.000002%);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 108 518 L 412 518 L 412 155 L 108 155 Z M 108 518 "/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 432 518 L 737 518 L 737 155 L 432 155 Z M 432 518 "/>
