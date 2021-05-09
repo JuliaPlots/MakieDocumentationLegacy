@@ -22,7 +22,7 @@
   strokewidth     0
   textsize        20
   transparency    false
-  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/35204a86322999fbdb945f916cf04005a22bec63/src/interfaces.jl#L257-L264">source</a></section></article><h3 id="Examples"><a class="docs-heading-anchor" href="#Examples">Examples</a><a id="Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Examples" title="Permalink"></a></h3><p>By default, text is drawn in screen space (<code>space = :screen</code>). The text anchor is given in data coordinates, but the size of the glyphs is independent of data scaling. The boundingbox of the text will include every data point or every text anchor point. This also means that <code>autolimits!</code> might cut off your text, because the glyphs don&#39;t have a meaningful size in data coordinates (the size is independent of zoom level), and you have to take some care to manually place the text or set data limits such that it is fully visible.</p><p>You can either plot one string with one position, or a vector of strings with a vector of positions.</p><pre><code class="language-julia">using CairoMakie
+  visible         true</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/c1042dc6016985a96f931875909aa98875743437/src/interfaces.jl#L257-L264">source</a></section></article><h3 id="Examples"><a class="docs-heading-anchor" href="#Examples">Examples</a><a id="Examples-1"></a><a class="docs-heading-anchor-permalink" href="#Examples" title="Permalink"></a></h3><p>By default, text is drawn in screen space (<code>space = :screen</code>). The text anchor is given in data coordinates, but the size of the glyphs is independent of data scaling. The boundingbox of the text will include every data point or every text anchor point. This also means that <code>autolimits!</code> might cut off your text, because the glyphs don&#39;t have a meaningful size in data coordinates (the size is independent of zoom level), and you have to take some care to manually place the text or set data limits such that it is fully visible.</p><p>You can either plot one string with one position, or a vector of strings with a vector of positions.</p><pre><code class="language-julia">using CairoMakie
 
 f = Figure()
 
@@ -620,7 +620,7 @@ f</code></pre><img src='data:image/svg+xml;utf-8,<?xml version="1.0" encoding="U
 </symbol>
 </g>
 </defs>
-<g id="surface54784">
+<g id="surface55028">
 <rect x="0" y="0" width="600" height="450" style="fill:rgb(100%25,100%25,100%25);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(49.803922%25,49.803922%25,49.803922%25);fill-opacity:1;" d="M 113.25 417.75 L 516.75 417.75 L 516.75 12 L 113.25 12 Z M 113.25 417.75 "/>
 <path style="fill:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%25,0%25,0%25);stroke-opacity:0.12;stroke-miterlimit:10;" d="M 170.052083 557 L 170.052083 16 " transform="matrix(0.75,0,0,0.75,0,0)"/>
@@ -1973,7 +1973,7 @@ f</code></pre><img src='data:image/svg+xml;utf-8,<?xml version="1.0" encoding="U
 </symbol>
 </g>
 </defs>
-<g id="surface54789">
+<g id="surface55033">
 <rect x="0" y="0" width="600" height="450" style="fill:rgb(100%25,100%25,100%25);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%25,100%25,100%25);fill-opacity:1;" d="M 12 12 L 588 12 L 588 438 L 12 438 Z M 12 12 "/>
 <g style="fill:rgb(50%25,50%25,50%25);fill-opacity:0.6;">
@@ -2396,7 +2396,7 @@ scene</code></pre><img src='data:image/svg+xml;utf-8,<?xml version="1.0" encodin
 </symbol>
 </g>
 </defs>
-<g id="surface54794">
+<g id="surface55038">
 <rect x="0" y="0" width="600" height="600" style="fill:rgb(100%25,100%25,100%25);fill-opacity:1;stroke:none;"/>
 <path style="fill-rule:nonzero;fill:rgb(65.098041%25,65.098041%25,65.098041%25);fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%25,0%25,0%25);stroke-opacity:1;stroke-miterlimit:10;" d="M 196.177083 600.005208 C 196.177083 599.328125 196.348958 598.6875 196.697917 598.088542 C 197.03125 597.505208 197.494792 597.041667 198.09375 596.692708 C 198.677083 596.348958 199.3125 596.171875 200.010417 596.171875 C 200.6875 596.171875 201.322917 596.348958 201.90625 596.692708 C 202.5 597.041667 202.96875 597.505208 203.302083 598.088542 C 203.645833 598.6875 203.822917 599.328125 203.822917 600.005208 C 203.822917 600.6875 203.645833 601.317708 203.302083 601.901042 C 202.96875 602.5 202.5 602.963542 201.90625 603.296875 C 201.322917 603.640625 200.6875 603.817708 200.010417 603.817708 C 199.3125 603.817708 198.677083 603.640625 198.09375 603.296875 C 197.494792 602.963542 197.03125 602.5 196.697917 601.901042 C 196.348958 601.317708 196.177083 600.6875 196.177083 600.005208 Z M 204.359375 602.588542 " transform="matrix(0.75,0,0,0.75,0,0)"/>
 <path style="fill-rule:nonzero;fill:rgb(65.098041%25,65.098041%25,65.098041%25);fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%25,0%25,0%25);stroke-opacity:1;stroke-miterlimit:10;" d="M 196.177083 400.005208 C 196.177083 399.328125 196.348958 398.6875 196.697917 398.088542 C 197.03125 397.505208 197.494792 397.041667 198.09375 396.692708 C 198.677083 396.348958 199.3125 396.171875 200.010417 396.171875 C 200.6875 396.171875 201.322917 396.348958 201.90625 396.692708 C 202.5 397.041667 202.96875 397.505208 203.302083 398.088542 C 203.645833 398.6875 203.822917 399.328125 203.822917 400.005208 C 203.822917 400.6875 203.645833 401.317708 203.302083 401.901042 C 202.96875 402.5 202.5 402.963542 201.90625 403.296875 C 201.322917 403.640625 200.6875 403.817708 200.010417 403.817708 C 199.3125 403.817708 198.677083 403.640625 198.09375 403.296875 C 197.494792 402.963542 197.03125 402.5 196.697917 401.901042 C 196.348958 401.317708 196.177083 400.6875 196.177083 400.005208 Z M 204.359375 402.588542 " transform="matrix(0.75,0,0,0.75,0,0)"/>
@@ -3420,7 +3420,7 @@ f</code></pre><img src='data:image/svg+xml;utf-8,<?xml version="1.0" encoding="U
 </symbol>
 </g>
 </defs>
-<g id="surface54799">
+<g id="surface55043">
 <rect x="0" y="0" width="600" height="450" style="fill:rgb(100%25,100%25,100%25);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%25,100%25,100%25);fill-opacity:1;" d="M 12 402 L 588 402 L 588 12 L 12 12 Z M 12 402 "/>
 <path style="fill:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%25,0%25,0%25);stroke-opacity:0.12;stroke-miterlimit:10;" d="M 16 536 L 16 16 " transform="matrix(0.75,0,0,0.75,0,0)"/>
@@ -3572,4 +3572,4 @@ f</code></pre><img src='data:image/svg+xml;utf-8,<?xml version="1.0" encoding="U
 <path style="fill:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%25,0%25,0%25);stroke-opacity:1;stroke-miterlimit:10;" d="M 784 536.5 L 784 15.5 " transform="matrix(0.75,0,0,0.75,0,0)"/>
 </g>
 </svg>
-'/></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="surface.html">« surface</a><a class="docs-footer-nextpage" href="violin.html">violin »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Saturday 8 May 2021 14:52">Saturday 8 May 2021</span>. Using Julia version 1.6.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+'/></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="surface.html">« surface</a><a class="docs-footer-nextpage" href="violin.html">violin »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Sunday 9 May 2021 10:50">Sunday 9 May 2021</span>. Using Julia version 1.6.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
